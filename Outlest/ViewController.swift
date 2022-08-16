@@ -9,11 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Un OUTLET es una conexiòn entre un control de UI del storyboard y una variable de còdigo swift
 
+    @IBOutlet weak var lblMiEtiqueta: UILabel!
+    
+    //Esta funciòn se ejecuta ya que cargò todo en memoria (antes de aparecer en pantalla)
+    //Lo que pongamos aquì sobreescribe lo del storyboard
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        lblMiEtiqueta.text = "Este es texto desde còdigo"
+        lblMiEtiqueta.textColor = UIColor.blue
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
